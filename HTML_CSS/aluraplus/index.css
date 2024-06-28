@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: #00030C;
+
+    --font-color: #FFFFFF;
+    --font-family: 'Inter', sans-serif;
+    --title-size: 48px;
+    --text-size: 16px;
+    --legend-size: 12px;
+    --legend-color: #C0C0C0;
+
+    --button-color: #167BF7;
+    --button-color2: #FFFFFF;
+    --button-hover: #3c92fa;
+}
+
+body {
+    background-color: var(--base-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+}
+
+.principal {
+    background-image: url("assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: center;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__img {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    display: block;
+    background-color: var(--button-color);
+    color: var(--font-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1em;
+}
+.container__botao:hover{
+    background-color: var(--button-hover);
+    color: var(--base-color);
+}
+.botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--button-color2);
+}
+
+.container__aviso {
+    color: var(--legend-color);
+    font-size: var(--legend-size);
+    font-weight: 400;
+}
+
+/* estilizacao das paginas secundarias */
+.secundario {
+    text-align: left;
+    margin: 0 10em;
+}
+
+.secundario__img {
+    width: 80%;
+}
+.container__descricao{
+    padding: 2em;
+}
+.descricao__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+
+.descricao__texto {
+    color: var(--legend-color);
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/*estilização da ultima pagina*/
+.dispositivos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--font-color);
+}
+.dispositivos__lista{
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+.lista__item{
+    font-size: 32px;
+    color: var(--font-color);
+}
+
+/* estilização do rodape */
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rodape__logo{
+    margin-bottom: 2.4em;
+}
+.rodape__lista{
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+    margin: 1.3em 0;
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+.lista__link a{
+   color: var(--branco-principal);   
+}
+.lista__link a:hover{
+    color: var(--button-color);   
+ }
+ .lista__link a:active{
+    color: purple;   
+ }
+.rodape__texto{
+    width: 70%;
+    margin: 1em;
+    text-align: center;
+    color: var(--legend-color);
+}
+

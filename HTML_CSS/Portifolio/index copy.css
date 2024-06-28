@@ -1,0 +1,24 @@
+body{
+    background-color: indigo;
+}
+h1 {
+    color: white;
+    /* Adicionar mais estilos conforme necessário */
+}
+p {
+    color: white;
+    /* Adicionar mais estilos conforme necessário */
+}
+a {
+    width: 280px;
+    height: 79px;
+    background-color: #22D4FD;
+    border: none;
+    /* Adicionar mais estilos conforme necessário */
+}
+img {
+    width: 467.71px;
+    height: 532px;
+    /* Adicionar estilos para formatar a imagem */
+}
+/* Adicionar mais estilos conforme necessário */

@@ -1,4 +1,4 @@
-```
+
 # Cursos Alura
 Olá, Bem vindo ao meu histórico de cursos.
 
@@ -6,10 +6,10 @@ Olá, Bem vindo ao meu histórico de cursos.
 
 * HTML & CSS
 
-## Feito por:
+# Feito por:
 
 ### Guilherme Nobres
 
 ### Linkedin: www.linkedin.com/in/guilhermenobres
 
-```
+

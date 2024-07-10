@@ -1,0 +1,26 @@
+@import url("css/header.css");
+@import url("css/banner.css");
+@import url("css/carrossel.css");
+@import url("css/topicos.css");
+@import url("css/contato.css");
+@import url("css/rodape.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --color-base: #EBECEE;
+    --second-color: #FFFFFF;
+    --color-blue: #002F52;
+
+
+    --color-title: #EB9B00;
+    --color-gradient: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+
+    --font-family: "Poppins";
+}
+
+body {
+    background-color: var(--color-base);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+}

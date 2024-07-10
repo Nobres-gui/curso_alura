@@ -16,13 +16,13 @@
 }
 
 .banner__pesquisa {
- background-color: transparent;
- border: 2px solid var(--second-color);
- border-radius: 2em;
- padding: 1em;
- width: 100%;
- color: var(--second-color);
- text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--second-color);
+    border-radius: 2em;
+    padding: 1em;
+    width: 100%;
+    color: var(--second-color);
+    text-align: center;
 }
 
 .banner__pesquisa::placeholder {

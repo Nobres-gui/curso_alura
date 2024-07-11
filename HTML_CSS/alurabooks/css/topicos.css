@@ -27,3 +27,18 @@
     font-size: 14px;
     font-weight: 700;
 }
+
+@media screen and (min-width: 1024px) {
+    .topicos__titulo {
+        font-size: 20px;
+    }
+    
+    .topicos__itens {
+        padding: 1em 1.5em;
+    }
+    
+    .topicos__itens a {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}

@@ -76,3 +76,35 @@
     padding: 0.2em 2.26em;
     background-color: var(--color-title);
 }
+
+@media screen and (min-width: 1024px) {
+    .carrossel__titulo {
+        font-size: 26px;
+        
+    }
+    .swiper-pagination{
+        margin: 2em 0em 3em 0em;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-slide {
+        margin-right: 5em;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: 63%;
+        
+    }
+
+    .card{
+        width: 50%;
+        margin: 2em auto;
+    }
+
+
+
+}

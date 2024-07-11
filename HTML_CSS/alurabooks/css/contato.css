@@ -31,8 +31,25 @@
 
 .contato__email::placeholder {
     padding-left: 2em;
-    font-family: var(--font-family);
+    font-family: var(--fonte-primaria);
     color: var(--color-blue);
     background: url(../assets/contato/Email.svg) no-repeat;
     background-position-y: -0.2em;
+}
+
+@media screen and (min-width: 1024px) {
+    .contato{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        padding: 4em 3em;
+    }
+    .contato__titulo{
+        font-size: 24px;
+    }
+
+    .contato__email{
+        width: 30%;
+    }
 }

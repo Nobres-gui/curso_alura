@@ -60,10 +60,6 @@
     margin-top: 1em;
 }
 
-/* .botoes__links{
-    margin: 0 0.5em ;
-} */
-
 .botoes {
     display: flex;
 }
@@ -80,9 +76,10 @@
 @media screen and (min-width: 1024px) {
     .carrossel__titulo {
         font-size: 26px;
-        
+
     }
-    .swiper-pagination{
+
+    .swiper-pagination {
         margin: 2em 0em 3em 0em;
     }
 
@@ -93,18 +90,55 @@
     .swiper-slide {
         margin-right: 5em;
     }
+
     .swiper-button-prev,
     .swiper-button-next {
         display: block;
         top: 63%;
-        
+
     }
 
-    .card{
-        width: 50%;
+    .card {
+        width: 40%;
         margin: 2em auto;
     }
+}
 
+@media screen and (min-width: 1728px) {
+    .carrossel__titulo {
+        font-size: 32px;
+    }
 
+    .carrossel__container {
+        display: flex;
+        margin: 3em 17vw 3em 17vw;
+    }
 
+    .swiper-pagination {
+        margin: 1em 0em;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: 50%;
+
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+    }
+
+    .descricao__texto {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 80%;
+        margin-left: 3em;
+    }
 }

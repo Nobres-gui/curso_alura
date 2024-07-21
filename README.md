@@ -5,7 +5,12 @@ Olá, Bem vindo ao meu histórico de cursos.
 ## Cursos feitos:
 
 * HTML & CSS
+  
+## Cursando:
 
+* Aplicação JavaScript em Web;
+* Aplicação JavaScript voltado ao Beck-End.
+  
 # Feito por:
 
 ### Guilherme Nobres

@@ -78,6 +78,11 @@ const contagemRegressiva = () => {
     if (tempoDecorridoSegundos <= 0) {
         alert('Tempo finalizado!');
         somTempoFinalizado.play();
+        const focoAtivo = html.getAttribute('data-contexto') == 'foco';
+        if (focoAtivo) {
+            const evento = new CustomEvent('focoFinalizado');
+            document.dispatchEvent(evento);
+        }
         zerar();
         return
     }
@@ -105,10 +110,6 @@ function zerar() {
     iniciarPausarIcon.setAttribute('src', `./imagens/play_arrow.png`)
     intervaloId = null;
 }
-
-
-
-
 
 function mostrarTempo() {
     const tempo = new Date(tempoDecorridoSegundos * 1000);

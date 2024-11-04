@@ -7,6 +7,7 @@ Olá, Bem vindo ao meu histórico de cursos.
 * HTML & CSS
 * React
 * Iniciante em programação
+* Linguagem C
 
   
 ## Cursando:

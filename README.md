@@ -8,11 +8,10 @@ Olá, Bem vindo ao meu histórico de cursos.
 * React
 * Iniciante em programação
 * Linguagem C
-
+* JavaScript: consumindo e tratando uma API
   
 ## Cursando:
 
-* Aplicação JavaScript em Web;
 * Aplicação JavaScript voltado ao Beck-End.
   
 # Feito por:

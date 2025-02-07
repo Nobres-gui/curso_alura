@@ -1,16 +1,20 @@
 const containerVideos = document.querySelector(".videos__container");
 
 async function buscaMostrarVideos() {
-    //"buscas os dados dentro da api"
-    const busca = await fetch("http://localhost:3000/videos");
-    const videos = await busca.json();
-    try {
-        videos.forEach(videos => {
-            //"erros personalizados"
-            if (videos.categoria == "") {
-                throw new Error("Vídeo não tem categoria")
-            }
-            containerVideos.innerHTML += `
+  //"buscas os dados dentro da api" (Jeito "tradicional")
+  // const busca = await fetch("http://localhost:3000/videos");
+  // const videos = await busca.json();
+  
+  /*JEITO FEITO COM A FERRAMENTA AXIOS*/
+  const busca = await axios.get("http://localhost:3000/videos");
+  const videos = busca.data;
+  try {
+    videos.forEach((videos) => {
+      //"erros personalizados"
+      if (videos.categoria == "") {
+        throw new Error("Vídeo não tem categoria");
+      }
+      containerVideos.innerHTML += `
             <li class="videos__item">
                 <iframe src="${videos.url}" title="${videos.titulo}" frameborder="0" allowfullscreen></iframe>
                 <div class="descricao-video">
@@ -21,11 +25,11 @@ async function buscaMostrarVideos() {
                 </div>
             </li>
             `;
-        })
-    } catch (error) {
-        containerVideos.innerHTML = `
+    });
+  } catch (error) {
+    containerVideos.innerHTML = `
         <p> Houve um erro ao carregar os vídeos: ${error}</p>`;
-    }
+  }
 }
 buscaMostrarVideos();
 
@@ -34,43 +38,42 @@ const barraPesquisa = document.querySelector(".pesquisar__input");
 barraPesquisa.addEventListener("input", filtrarPesquisa);
 
 function filtrarPesquisa() {
-    const videos = document.querySelectorAll(".videos__item");
+  const videos = document.querySelectorAll(".videos__item");
 
-    if (barraPesquisa.value != "") {
-        //faz o for passar por todos os videos
-        for (let video of videos) {
-            let titulo = video.querySelector(".titulo-video").textContent.toLowerCase();
-            let valorFiltro = barraPesquisa.value.toLowerCase();
+  if (barraPesquisa.value != "") {
+    //faz o for passar por todos os videos
+    for (let video of videos) {
+      let titulo = video.querySelector(".titulo-video").textContent.toLowerCase();
+      let valorFiltro = barraPesquisa.value.toLowerCase();
 
-            if (!titulo.includes(valorFiltro)) {
-                video.style.display = "none";
-            } else {
-                video.style.display = "block";
-            }
-        }
-    } else {
+      if (!titulo.includes(valorFiltro)) {
+        video.style.display = "none";
+      } else {
         video.style.display = "block";
+      }
     }
+  } else {
+    video.style.display = "block";
+  }
 }
-
 
 const botaoCategoria = document.querySelectorAll(".superior__item");
 
 botaoCategoria.forEach((botao) => {
-    let nomeCategoria = botao.getAttribute("name");
-    botao.addEventListener("click", () => filtrarCategoria(nomeCategoria));
-})
+  let nomeCategoria = botao.getAttribute("name");
+  botao.addEventListener("click", () => filtrarCategoria(nomeCategoria));
+});
 
-function filtrarCategoria(filtro){
-    const videos = document.querySelectorAll(".videos__item");
-    for(let video of videos){
-        let categoria = video.querySelector(".categoria").textContent.toLowerCase();
-        let valorFiltro = filtro.toLowerCase();
+function filtrarCategoria(filtro) {
+  const videos = document.querySelectorAll(".videos__item");
+  for (let video of videos) {
+    let categoria = video.querySelector(".categoria").textContent.toLowerCase();
+    let valorFiltro = filtro.toLowerCase();
 
-        if (!categoria.includes(valorFiltro) && valorFiltro != 'tudo') {
-            video.style.display ="none";
-        } else {
-            video.style.display ="block";
-        }
+    if (!categoria.includes(valorFiltro) && valorFiltro != "tudo") {
+      video.style.display = "none";
+    } else {
+      video.style.display = "block";
     }
+  }
 }
